@@ -24,7 +24,6 @@ public class VerificationCodeFilter extends GenericFilter {
     HttpServletResponse response = (HttpServletResponse) servletResponse;
     //如果是登录请求则拦截
     if ("POST".equals(request.getMethod())&&"/doLogin".equals(request.getServletPath())){
-      //TODO 不启动验证码
       filterChain.doFilter(request,response);
       //用户输入的验证码
       String code = request.getParameter("code");
