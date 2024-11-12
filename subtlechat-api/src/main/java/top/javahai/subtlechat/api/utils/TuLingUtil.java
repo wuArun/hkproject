@@ -60,9 +60,4 @@ public class TuLingUtil {
     String result = ((String) resultMap.get("text"));
     return result;
   }
-  public static void main(String[] args) throws IOException {
-    String jsonStr = replyMessage("http://39.108.169.57/group1/M00/00/00/J2ypOV7wP0-AEZHOAAILbcn5GEM095.jpg");
-    HashMap resultMap = MAPPER.readValue(jsonStr, HashMap.class);
-    System.out.println(resultMap.get("text"));
-  }
 }
